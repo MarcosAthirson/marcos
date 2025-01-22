@@ -4,6 +4,8 @@ import dao
 app = Flask(__name__)
 app.secret_key = '123'
 
+#PARA TESTES
+
 @app.route('/')
 def pageHome():
     if 'login' in session:
@@ -89,4 +91,5 @@ def sair():
     session['login'] = None
     return render_template('page/home.html')
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
