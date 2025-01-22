@@ -4,8 +4,6 @@ import dao
 app = Flask(__name__)
 app.secret_key = '123'
 
-
-#etsetsetseteste
 @app.route('/')
 def pageHome():
     if 'login' in session:
